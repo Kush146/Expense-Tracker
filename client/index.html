@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Expense Tracker</title>
+    <script>
+      // Set initial theme (localStorage > system preference), before paint
+      (function () {
+        const ls = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const shouldDark = ls ? ls === "dark" : prefersDark;
+        document.documentElement.classList.toggle("dark", shouldDark);
+      })();
+    </script>
+  </head>
+  <body
+    class="h-full bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

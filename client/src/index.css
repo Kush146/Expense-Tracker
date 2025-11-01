@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: 234 89% 62%; /* indigo-600 */
+    --accent: 220 14% 96%; /* slate-100 */
+    --ink: 222 47% 11%; /* slate-900 */
+    --ink-soft: 215 16% 47%; /* slate-500 */
+    --ok: 142 72% 45%; /* green-500 */
+    --warn: 346 77% 49%; /* rose-500 */
+    --info: 217 91% 60%; /* blue-500 */
+    --card: 0 0% 100%;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+}
+
+@layer components {
+  /* cards */
+  .card {
+    @apply rounded-2xl bg-white shadow-sm ring-1 ring-slate-200
+           dark:bg-slate-800 dark:ring-slate-700;
+  }
+  .card-muted {
+    @apply rounded-2xl bg-gradient-to-br from-white to-slate-50 shadow-sm ring-1 ring-slate-200
+           dark:from-slate-800 dark:to-slate-800/60 dark:ring-slate-700;
+  }
+  .card-body {
+    @apply p-5;
+  }
+
+  /* buttons */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition;
+  }
+  .btn-primary {
+    background-image: linear-gradient(
+      135deg,
+      hsl(var(--brand)) 0%,
+      hsl(var(--info)) 100%
+    );
+    @apply text-white shadow hover:brightness-95 active:brightness-90 disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply border border-slate-300 hover:bg-slate-50
+           dark:border-slate-600 dark:hover:bg-slate-700;
+  }
+
+  /* form inputs */
+  .input {
+    @apply w-full rounded-xl border border-slate-300 bg-white px-3 py-2 outline-none
+           focus:ring-2 focus:ring-indigo-200 focus:border-indigo-300
+           dark:border-slate-600 dark:bg-slate-800 dark:focus:ring-indigo-800 dark:focus:border-indigo-700;
+  }
+  .label {
+    @apply text-sm font-semibold text-slate-700 dark:text-slate-300;
+  }
+  .muted {
+    @apply text-sm text-slate-500 dark:text-slate-400;
+  }
+
+  /* chips */
+  .chip {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .chip-ok {
+    @apply bg-green-50 text-green-700 ring-1 ring-green-200
+           dark:bg-green-400/10 dark:text-green-300 dark:ring-green-400/20;
+  }
+  .chip-warn {
+    @apply bg-rose-50 text-rose-700 ring-1 ring-rose-200
+           dark:bg-rose-400/10 dark:text-rose-300 dark:ring-rose-400/20;
+  }
+
+  /* loading */
+  .skeleton {
+    @apply animate-pulse rounded-xl bg-slate-200 dark:bg-slate-700;
+  }
+
+  /* table row hover */
+  .row-hover {
+    @apply hover:bg-slate-50 dark:hover:bg-slate-700/60;
+  }
+}
