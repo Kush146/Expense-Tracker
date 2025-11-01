@@ -32,6 +32,20 @@ A full-stack Expense Tracker application built with **Node.js**, **Express**, **
 
 ---
 
+## Project Screenshots
+
+### Dashboard Overview (Light Mode)
+![Dashboard Light](assets/Screenshot%202025-11-01%20234000.png)
+
+### Dashboard (Dark Mode)
+![Dashboard Dark](assets/Screenshot%202025-11-01%20234004.png)
+
+### Filters and Charts
+![Filters and Charts](assets/Screenshot%202025-11-01%20234011.png)
+
+---
+
+
 ## Tech Stack
 
 **Frontend:** React, Vite, Redux Toolkit, TypeScript, Tailwind CSS, Recharts  
