@@ -107,7 +107,4 @@ GET /api/transactions?type=income&category=salary&startDate=2025-11-01&endDate=2
 3. Use filters and charts to analyze your data.
 4. Toggle Dark/Light theme for a better UX.
 
-##  License
 
-This project is for the AECCI machine test submission.
-© 2025 — Developed by [Your Name]
